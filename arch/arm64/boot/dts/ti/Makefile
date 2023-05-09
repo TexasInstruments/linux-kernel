@@ -18,6 +18,7 @@ dtb-$(CONFIG_ARCH_K3) += k3-am625-sk-csi2-tevi-ov5640.dtbo
 # Boards with AM62Ax SoC
 dtb-$(CONFIG_ARCH_K3) += k3-am62a7-sk.dtb
 dtb-$(CONFIG_ARCH_K3) += k3-am62a7-sk-csi2-imx219.dtbo
+dtb-$(CONFIG_ARCH_K3) += k3-am62a7-sk-fusion.dtbo
 
 # Boards with AM64x SoC
 dtb-$(CONFIG_ARCH_K3) += k3-am642-evm.dtb
@@ -54,10 +55,13 @@ dtb-$(CONFIG_ARCH_K3) += k3-am69-sk.dtb
 dtb-$(CONFIG_ARCH_K3) += k3-j784s4-evm.dtb
 
 # Enable support for device-tree overlays
+DTC_FLAGS_k3-am62-lp-sk += -@
+DTC_FLAGS_k3-am625-sk += -@
+DTC_FLAGS_k3-am625-sk-lpmdemo += -@
+DTC_FLAGS_k3-am62a7-sk += -@
+DTC_FLAGS_k3-am62a7-sk-fusion += -@
+DTC_FLAGS_k3-am654-base-board += -@
 DTC_FLAGS_k3-am6548-iot2050-advanced-m2 += -@
 DTC_FLAGS_k3-j7200-common-proc-board += -@
 DTC_FLAGS_k3-j721e-common-proc-board += -@
 DTC_FLAGS_k3-j721e-sk += -@
-DTC_FLAGS_k3-am62a7-sk += -@
-DTC_FLAGS_k3-am625-sk += -@
-DTC_FLAGS_k3-am625-sk-lpmdemo += -@
