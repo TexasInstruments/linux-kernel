@@ -300,7 +300,7 @@
 	status = "okay";
 	pinctrl-names = "default";
 	pinctrl-0 = <&main_i2c1_pins_default>;
-	clock-frequency = <400000>;
+	clock-frequency = <100000>;
 
 	tlv320aic3106: audio-codec@1b {
 		#sound-dai-cells = <0>;
@@ -313,6 +313,13 @@
 		IOVDD-supply = <&vcc_3v3_sys>;
 		DRVDD-supply = <&vcc_3v3_sys>;
 	};
+};
+
+&main_i2c2 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&main_i2c2_pins_default>;
+	clock-frequency = <400000>;
 };
 
 &sdhci0 {
@@ -409,4 +416,12 @@
 	>;
 	tx-num-evt = <32>;
 	rx-num-evt = <32>;
+};
+
+&ti_csi2rx0 {
+	status = "okay";
+};
+
+&dphy0 {
+	status = "okay";
 };
